@@ -26,6 +26,8 @@ app.post("/register", (req, res) => {
   res.json({ msg: "Registration Successfull" });
 });
 
+app.get("/", (_, rez) => rez.send("Hello world"));
+
 app.listen(process.env.PORT, () => {
   console.log(
     "> Server started on http://" + process.env.HOST + ":" + process.env.PORT
